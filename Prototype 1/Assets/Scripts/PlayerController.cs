@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    // Declaring a float requires f at the end. Public due to usage outside of class. 
-    public float speed = 5.0f;
-    public float turnSpeed;
-    public float horizontalInput;
-    public float forwardInput; 
+    // Private Variables
+    private float speed = 18f; // 18f
+    private float turnSpeed = 90f; // 70f
+    private float horizontalInput; 
+    private float forwardInput; 
     
 
     // Start is called before the first frame update
@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Setting our horizontal and forward input floats to calculate turning/turn speed. 
+        // This is where we get player input. 
         horizontalInput = Input.GetAxis("Horizontal");
         forwardInput = Input.GetAxis("Vertical"); 
 
