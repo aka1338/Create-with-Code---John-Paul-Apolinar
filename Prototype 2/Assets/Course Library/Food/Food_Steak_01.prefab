@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 442954}
   - component: {fileID: 3383128}
   - component: {fileID: 2354634}
+  - component: {fileID: 1682961851}
+  - component: {fileID: 3487139227339976736}
   m_Layer: 0
   m_Name: Food_Steak_01
   m_TagString: Untagged
@@ -77,3 +79,28 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &1682961851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b3e8af20728c954994d74c43dc71b32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 40
+--- !u!114 &3487139227339976736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56f62615f0e014544b157fe12d9a8c7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
