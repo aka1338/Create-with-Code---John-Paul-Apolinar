@@ -21,7 +21,9 @@ public class DestroyOutOfBounds : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        // Deletes animals that pass the bottom bound. Also prints game over. 
         else if (transform.position.z < bottomBound) {
+            Debug.Log("Game over!");
             Destroy(gameObject); 
         }
     }
