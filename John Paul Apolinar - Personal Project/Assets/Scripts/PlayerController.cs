@@ -6,10 +6,10 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody playerRb;
 
-    public float windForce = 90f; // 70f
+    public float windForce = 220f; // 70f
     private float horizontalInput;
     private float forwardInput;
-    public float gravityModifier = 10;
+    public float gravityModifier = 1.5f;
     public float initialPush = 40f; 
 
     // Start is called before the first frame update
