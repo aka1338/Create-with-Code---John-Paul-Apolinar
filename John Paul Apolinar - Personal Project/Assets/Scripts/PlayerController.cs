@@ -10,7 +10,8 @@ public class PlayerController : MonoBehaviour
     private float horizontalInput;
     private float forwardInput;
     public float gravityModifier = 1.5f;
-    public float initialPush = 40f; 
+    public float initialPush = 40f;
+    public float jumpForce = 40f;
 
     // Start is called before the first frame update
     void Start()
@@ -29,5 +30,17 @@ public class PlayerController : MonoBehaviour
         
         // The player can activate "wind" that pushes the tire either left or right. 
         playerRb.AddForce(Vector3.right * Time.deltaTime * horizontalInput * windForce, ForceMode.Impulse);
+
+        Debug.Log(playerRb.velocity.magnitude);
+
+        if (playerRb.velocity.magnitude > 50) {
+            playerRb.AddForce(Vector3.back*playerRb.velocity.magnitude, ForceMode.Impulse); 
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            playerRb.AddForce(Vector3.up*jumpForce, ForceMode.Impulse); 
+        }
+
     }
 }

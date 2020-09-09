@@ -15,7 +15,7 @@ public class SpawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Instantiate(hillPrefabs[0], initialPos, hillPrefabs[0].transform.rotation); 
+        var firstPlatform = Instantiate(hillPrefabs[0], initialPos, hillPrefabs[0].transform.rotation); 
         hillThreshold = 22.52f + 119f; 
     }
 
@@ -24,12 +24,17 @@ public class SpawnManager : MonoBehaviour
     {
 
         if (player.transform.position.y < -hillThreshold) {
-            Instantiate(hillPrefabs[0], initialPos + new Vector3(0, -230.356554f, 299.599481f), hillPrefabs[0].transform.rotation);
+            GameObject clone = Instantiate(hillPrefabs[0], initialPos + new Vector3(0, -230.356554f, 299.599481f), hillPrefabs[0].transform.rotation);
             hillThreshold += 119f;
-            initialPos = initialPos + new Vector3(0, -230.356554f, 299.599481f); 
+            initialPos = initialPos + new Vector3(0, -230.356554f, 299.599481f);
+
+            // This doesn't work, ugh this game is a mess. I'm not really enjoying making this one. 
+            if (player.transform.position.y > hillThreshold) {
+                GameObject.Destroy(clone);
+            }
         }
 
-        
+
     }
 
 }
